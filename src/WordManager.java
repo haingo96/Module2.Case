@@ -4,6 +4,10 @@ import java.util.List;
 public class WordManager{
     private List<Word> words = new ArrayList<>();
 
+    public List<Word> getWords() {
+        return words;
+    }
+
     public void add(Word word){
         boolean wordIsExisted = words.stream().map(word1 -> word1.getSpell()).toList().contains(word.getSpell());
         if (!wordIsExisted){

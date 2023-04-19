@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Controller {
@@ -40,8 +41,14 @@ public class Controller {
         int userChoice = scanner.nextInt();
         if (userChoice == 1 || userChoice == 2){
             Variables.USERS_LANGUAGE_CHOICE = userChoice;
+            studyOptionMenu();
+        }else {
+            try {
+                WriteFileWord.writeToEnFile();
+                WriteFileWord.writeToJpFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-
-        studyOptionMenu();
     }
 }
