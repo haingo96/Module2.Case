@@ -18,8 +18,14 @@ public class WordManager{
     }
 
     public void remove(String spell){
-        Word wordMatchSpell = words.stream().filter(word -> word.getSpell().equals(spell)).findFirst().get();
-        words.remove(wordMatchSpell);
+        boolean wordExist = words.stream().map(word -> word.getSpell()).toList().contains(spell);
+        if (wordExist){
+            Word wordMatchSpell = words.stream().filter(word -> word.getSpell().equals(spell)).findFirst().get();
+            words.remove(wordMatchSpell);
+            System.out.println("Remove successfully");
+        }else {
+            System.out.println("Word not exist\ncannot remove");
+        }
     }
 
     public void edit(String spell, String newMean){
@@ -29,7 +35,11 @@ public class WordManager{
 
     public void display(String spell){
         List<Word> holder = words.stream().filter(word1 -> word1.getSpell().contains(spell)).toList();
-        String result = holder.toString();
-        System.out.println(result.replaceAll(",", "\n"));
+        if (holder.isEmpty()){
+            System.out.println("No matched results");
+        }else {
+            String result = holder.toString();
+            System.out.println(result.replaceAll(",", "\n"));
+        }
     }
 }

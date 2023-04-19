@@ -36,7 +36,7 @@ public class Controller {
                 What's in your mind:
                 1. Learn English
                 2. Learn Japanese
-                3. Quit! No study today!!!""");
+                3. Quit! No more study for today!!!""");
 
         int userChoice = scanner.nextInt();
         if (userChoice == 1 || userChoice == 2){

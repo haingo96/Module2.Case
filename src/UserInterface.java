@@ -43,13 +43,19 @@ public class UserInterface {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input the word you want to edit its mean:");
         String inputSpell = scanner.nextLine();
-        System.out.println("Input its new mean");
-        String inputNewMean = scanner.nextLine();
+        boolean enWordExist = Variables.enWordManager.getWords().stream().map(word -> word.getSpell()).toList().contains(inputSpell);
+        boolean jpWordExist = Variables.jpWordManager.getWords().stream().map(word -> word.getSpell()).toList().contains(inputSpell);
+        if (enWordExist || jpWordExist) {
+            System.out.println("Input its new mean");
+            String inputNewMean = scanner.nextLine();
 
-        if (Variables.USERS_LANGUAGE_CHOICE == 1){
-            Variables.enWordManager.edit(inputSpell, inputNewMean);
-        }else if (Variables.USERS_LANGUAGE_CHOICE == 2) {
-            Variables.jpWordManager.edit(inputSpell, inputNewMean);
+            if (Variables.USERS_LANGUAGE_CHOICE == 1){
+                Variables.enWordManager.edit(inputSpell, inputNewMean);
+            }else if (Variables.USERS_LANGUAGE_CHOICE == 2) {
+                Variables.jpWordManager.edit(inputSpell, inputNewMean);
+            }
+        }else {
+            System.out.println("Word not exist\ncan not edit");
         }
 
         if (!checkEndOfAction()){

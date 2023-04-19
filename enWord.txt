@@ -1,4 +1,4 @@
 new:'new'
 yes:'yes'
 sun:'sin'
-cut:'cắt'
+cut:'cut'
