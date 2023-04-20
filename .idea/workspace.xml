@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2fc63da-dee3-483e-bfee-8e5172fe6838" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/DictionaryManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ReadDataFromDictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enWord.txt" beforeDir="false" afterPath="$PROJECT_DIR$/enWord.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Variables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Variables.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/ngoho/OneDrive/Desktop/CodeGym/Module2/Case",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,6 +57,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ngoho\OneDrive\Desktop\CodeGym\Module2\Case" />
+    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="Variables" />
     </key>
@@ -61,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681800725523</updated>
-      <workItem from="1681800726882" duration="38080000" />
+      <workItem from="1681800726882" duration="48696000" />
     </task>
     <servers />
   </component>
@@ -72,6 +83,7 @@
     <watches-manager>
       <configuration name="Application">
         <watch expression="words.stream().map(word -&gt; word.getSpell()).findFirst().get()" language="JAVA" />
+        <watch expression="newWord" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

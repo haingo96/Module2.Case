@@ -1,6 +1,24 @@
 import java.util.Scanner;
 
 public class Controller {
+    public static void searchFromDict(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input the word you want to know about:");
+        String toSearchWord = scanner.nextLine();
+
+        if (Variables.USERS_LANGUAGE_CHOICE == 1){
+            Variables.enDict.display(toSearchWord);
+        }else if (Variables.USERS_LANGUAGE_CHOICE == 2) {
+            Variables.jpDict.display(toSearchWord);
+        }
+
+        if (!checkEndOfAction()){
+            searchFromDict();
+        }else {
+            UserInterface.studyOptionMenu();
+        }
+    }
+
     public static void search() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input the word you want to know about:");
