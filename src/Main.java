@@ -10,6 +10,6 @@ public class Main {
             throw new RuntimeException(e);
         }
 
-        Controller.printIntroMenu();
+        UserInterface.printIntroMenu();
     }
 }
