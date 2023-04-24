@@ -2,14 +2,40 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class UserInterface {
-    public static void actionController(int studyAct) {
+    public static void printLoginMenu() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("""
+                ===============================================
+                || Please log in to use our services         ||
+                || Sign up in case you don't have account... ||
+                || 1. Log in                                 ||
+                || 2. Sign up                                ||
+                || 3. Quit                                   ||
+                ===============================================""");
+
+        int introAction = scanner.nextInt();
+
+        if (introAction == 1) {
+            UserController.logIn();
+        } else if (introAction == 2) {
+            UserController.signUp();
+        }else {
+            try {
+                WriteFileUserPool.writeUserPool();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void studyActivityController(int studyAct) {
         switch (studyAct) {
-            case 1 -> Controller.importWord();
-            case 2 -> Controller.editWord();
-            case 3 -> Controller.search();
-            case 4 -> Controller.removeWord();
-            case 5 -> Controller.searchFromDict();
-            case 6 -> printIntroMenu();
+            case 1 -> StudyController.importWord();
+            case 2 -> StudyController.editWord();
+            case 3 -> StudyController.search();
+            case 4 -> StudyController.removeWord();
+            case 5 -> StudyController.searchFromDict();
+            case 6 -> printLanguageOptions();
         }
     }
 
@@ -27,10 +53,10 @@ public class UserInterface {
                 || 6. Back                          ||
                 ======================================""");
 
-        actionController(scanner.nextInt());
+        studyActivityController(scanner.nextInt());
     }
 
-    public static void printIntroMenu() {
+    public static void printLanguageOptions() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("""
@@ -51,8 +77,12 @@ public class UserInterface {
             try {
                 WriteFileWord.writeToEnFile();
                 WriteFileWord.writeToJpFile();
+                Variables.enWordManager.clear();
+                Variables.jpWordManager.clear();
             } catch (IOException e) {
                 e.printStackTrace();
+            }finally {
+                printLoginMenu();
             }
         }
     }

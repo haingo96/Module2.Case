@@ -1,5 +1,0 @@
-new:'mới'
-yes:'đúng'
-sun:'mặt trời'
-cut:'cắt'
-love:'tình yêu'

@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2fc63da-dee3-483e-bfee-8e5172fe6838" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DictionaryManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReadDataFromDictionary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ReadFileUserPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UserManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WriteFileUserPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userPool.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enWord.txt" beforeDir="false" afterPath="$PROJECT_DIR$/enWord.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enWord.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpWord.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReadFileWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadFileWord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Variables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Variables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WordManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WriteFileWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WriteFileWord.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,21 +50,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ngoho/OneDrive/Desktop/CodeGym/Module2/Case",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ngoho/OneDrive/Desktop/CodeGym/Module2/Case&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ngoho\OneDrive\Desktop\CodeGym\Module2\Case" />
@@ -72,7 +81,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681800725523</updated>
-      <workItem from="1681800726882" duration="48696000" />
+      <workItem from="1681800726882" duration="50927000" />
+      <workItem from="1682067482796" duration="25098000" />
     </task>
     <servers />
   </component>
@@ -84,6 +94,7 @@
       <configuration name="Application">
         <watch expression="words.stream().map(word -&gt; word.getSpell()).findFirst().get()" language="JAVA" />
         <watch expression="newWord" language="JAVA" />
+        <watch expression="Arrays.toString(Variables.LOGGING_IN_USER.getEnWordManager().getWords().toArray())" language="JAVA" custom="java.util.Arrays" />
       </configuration>
     </watches-manager>
   </component>

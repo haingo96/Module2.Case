@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Controller {
+public class StudyController {
     public static void searchFromDict(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input the word you want to know about:");

@@ -1,4 +1,6 @@
-public abstract class Word {
+import java.io.Serializable;
+
+public abstract class Word implements Serializable {
     protected String spell;
     protected String mean;
 

@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WordManager{
+public class WordManager implements Serializable {
     private List<Word> words = new ArrayList<>();
 
     public List<Word> getWords() {
@@ -31,6 +32,10 @@ public class WordManager{
     public void edit(String spell, String newMean){
         Word matchWord = words.stream().filter(word1 -> word1.getSpell().equals(spell)).findFirst().get();
         matchWord.setMean(newMean);
+    }
+
+    public void clear() {
+        words.clear();
     }
 
     public void display(String spell){
